@@ -1,0 +1,41 @@
+﻿<link href="/app/directive/queuemanager/queue-manager.css" rel="stylesheet" />
+
+<div class="queueManager">
+    <div class="command">
+        <i class="glyphicon glyphicon-minus minimizeButton"></i>
+        <i class="glyphicon glyphicon-remove closeButton"></i>
+    </div>
+    <div class="list">
+        <table style="width: 100%; table-layout: fixed">
+            <thead>
+                <tr>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                    <th class="text-center">
+                        Status
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in dataSource">
+                    <td>{{item.field1}}</td>
+                    <td>{{item.field2}}</td>
+                    <td class="text-center">
+                        <i class="glyphicon" ng-class="{
+                           'glyphicon-refresh': item.status == 1,
+                           'rotate-icon': item.status == 1,
+                           'glyphicon-ok': item.status == 2,
+                           'statusOK': item.status == 2,
+                           'glyphicon-remove': item.status == 3,
+                           'statusError': item.status == 3
+                           }"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

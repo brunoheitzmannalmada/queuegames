@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Queue Items</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="Content/Site.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="app/app.js"></script>
+    <script src="app/class/QueueItem.js"></script>
+    <script src="app/controller/QueueItemController.js"></script>
+    <script src="app/directive/queuemanager/QueueManager.js"></script>
+</head>
+<body ng-app="QueueGames">
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-brand">
+                The games
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content" ng-controller="QueueListController as queueCtrl">
+        <div class="table table-striped">
+            <div class="row">
+                <div class="col-md-5">Name</div>
+                <div class="col-md-5">
+                    <input type="text" class="form-control" id="txtField1" ng-model="queueCtrl.currrentItem.Name" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">Year lauch</div>
+                <div class="col-md-5">
+                    <input type="text" class="form-control" id="txtField2" ng-model="queueCtrl.currrentItem.YearLaunch" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">Developer</div>
+                <div class="col-md-5">
+                    <input type="text" class="form-control" id="txtField3" ng-model="queueCtrl.currrentItem.Developer" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">Platform</div>
+                <div class="col-md-5">
+                    <input type="text" class="form-control" id="txtField3" ng-model="queueCtrl.currrentItem.Platform" />
+                </div>
+            </div>
+            <div class="row">
+                <button type="button" class="btn btn-default" ng-click="queueCtrl.Save()">Save</button>
+            </div>
+        </div>
+        <hr />
+        <footer>
+            <p>&copy; My AngularJS Application</p>
+        </footer>
+        <queue-manager src="queueCtrl.listOfItems"></queue-manager>
+    </div>
+</body>
+</html>

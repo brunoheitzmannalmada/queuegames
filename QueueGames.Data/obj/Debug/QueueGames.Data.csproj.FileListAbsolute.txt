@@ -1,0 +1,12 @@
+C:\Users\Bruno\SkyDrive\Projetos\QueueGames\QueueGames.Data\bin\Debug\App_Data\QueueGames_log.ldf
+C:\Users\Bruno\SkyDrive\Projetos\QueueGames\QueueGames.Data\bin\Debug\App_Data\QueueGames.mdf
+C:\Users\Bruno\SkyDrive\Projetos\QueueGames\QueueGames.Data\bin\Debug\QueueGames.Data.dll.config
+C:\Users\Bruno\SkyDrive\Projetos\QueueGames\QueueGames.Data\bin\Debug\QueueGames.Data.dll
+C:\Users\Bruno\SkyDrive\Projetos\QueueGames\QueueGames.Data\bin\Debug\QueueGames.Data.pdb
+C:\Users\Bruno\SkyDrive\Projetos\QueueGames\QueueGames.Data\bin\Debug\EntityFramework.dll
+C:\Users\Bruno\SkyDrive\Projetos\QueueGames\QueueGames.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Bruno\SkyDrive\Projetos\QueueGames\QueueGames.Data\bin\Debug\EntityFramework.xml
+C:\Users\Bruno\SkyDrive\Projetos\QueueGames\QueueGames.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Bruno\SkyDrive\Projetos\QueueGames\QueueGames.Data\obj\Debug\QueueGames.Data.dll
+C:\Users\Bruno\SkyDrive\Projetos\QueueGames\QueueGames.Data\obj\Debug\QueueGames.Data.pdb
+C:\Users\Bruno\SkyDrive\Projetos\QueueGames\QueueGames.Data\obj\Debug\QueueGames.Data.csprojResolveAssemblyReference.cache
