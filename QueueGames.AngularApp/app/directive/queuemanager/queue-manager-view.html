@@ -6,23 +6,23 @@
         <i class="glyphicon glyphicon-remove closeButton"></i>
     </div>
     <div class="list">
-        <table style="width: 100%; table-layout: fixed">
+        <table class="table table-hover" style="width: 100%; table-layout: fixed">
             <thead>
                 <tr>
-                    <th>
+                    <th class="col-md-4">
                         Name
                     </th>
-                    <th>
+                    <th class="col-md-2">
                         Description
                     </th>
-                    <th class="text-center">
+                    <th class="text-center col-md-1">
                         Status
                     </th>
                 </tr>
             </thead>
             <tbody>
                 <tr ng-repeat="item in dataSource">
-                    <td>{{item.field1}}</td>
+                    <td style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis;" title="{{item.field1}}">{{item.field1}}</td>
                     <td>{{item.field2}}</td>
                     <td class="text-center">
                         <i class="glyphicon" ng-class="{

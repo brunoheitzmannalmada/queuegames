@@ -1,0 +1,23 @@
+﻿<div class="table table-striped">
+    <div class="row">
+        <div class="col-md-5">Product name</div>
+        <div class="col-md-5">
+            <input type="text" class="form-control" id="txtField1" ng-model="productCtrl.currrentItem.Name" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-5">Description</div>
+        <div class="col-md-5">
+            <input type="text" class="form-control" id="txtField2" ng-model="productCtrl.currrentItem.YearLaunch" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-5">Price</div>
+        <div class="col-md-5">
+            <input type="text" class="form-control" id="txtField3" ng-model="productCtrl.currrentItem.Developer" />
+        </div>
+    </div>
+    <div class="row">
+        <button type="button" class="btn btn-default" ng-click="productCtrl.Save()">Save</button>
+    </div>
+</div>

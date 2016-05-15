@@ -1,4 +1,5 @@
 ﻿using QueueGames.Data;
+using QueueGames.Data.Context;
 using QueueGames.Data.Repositories;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,7 @@ namespace QueueGames.WebApi.Controllers
         // GET api/<controller>
         public string Get()
         {
+            System.Threading.Thread.Sleep(2000);
             return Newtonsoft.Json.JsonConvert.SerializeObject(productRepositorie.GetAll());
         }
 
@@ -28,9 +30,14 @@ namespace QueueGames.WebApi.Controllers
         }
 
         // POST api/<controller>
-        public void Post([FromBody]string value)
+        public IHttpActionResult Post([FromBody]Products product)
         {
+            System.Threading.Thread.Sleep(1500);
 
+            if ((DateTime.Now.Millisecond % 2) > 0)
+                return Ok();
+            else
+                return InternalServerError();
         }
 
         // PUT api/<controller>/5

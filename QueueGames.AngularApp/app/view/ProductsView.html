@@ -1,0 +1,34 @@
+﻿<link href="/Content/Products.css" rel="stylesheet" />
+
+<div ng-controller="ProductsController as productCtrl" ng-init="productCtrl.init()">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th><i class="glyphicon glyphicon-cog" style="font-size: 1.5em;"></i></th>
+            </tr>
+        </thead>
+        <tbody ng-show="productCtrl.Products.length < 1">
+            <tr>
+                <td colspan="4" class="text-center">
+                    <i class="glyphicon glyphicon-refresh rotate-icon" style="font-size: 2em;"></i>
+                </td>
+            </tr>
+        </tbody>
+        <tbody ng-show="productCtrl.Products.length > 0">
+            <tr ng-repeat="product in productCtrl.Products track by product.ProductID">
+                <td class="col-md-4">{{product.ProductName}}</td>
+                <td class="col-md-3">{{product.QuantityPerUnit}}</td>
+                <td class="col-md-3">{{product.UnitPrice}}</td>
+                <td class="col-md-1">
+                    <i class="glyphicon glyphicon-thumbs-up icon like" title="Like" ng-click="productCtrl.like(product)"></i>
+                    <i class="glyphicon glyphicon-shopping-cart icon buy" title="Buy" ng-click="productCtrl.buy(product)"></i>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <queue-manager src="productCtrl.listOfItems"></queue-manager>
+</div>

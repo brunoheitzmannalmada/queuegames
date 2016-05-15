@@ -1,1 +1,34 @@
-﻿
+﻿<div ng-controller="QueueListController as queueCtrl">
+
+    <div class="table">
+        <div class="row">
+            <div class="col-md-5">Name</div>
+            <div class="col-md-5">
+                <input type="text" class="form-control" id="txtField1" ng-model="queueCtrl.currrentItem.Name" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5">Year lauch</div>
+            <div class="col-md-5">
+                <input type="text" class="form-control" id="txtField2" ng-model="queueCtrl.currrentItem.YearLaunch" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5">Developer</div>
+            <div class="col-md-5">
+                <input type="text" class="form-control" id="txtField3" ng-model="queueCtrl.currrentItem.Developer" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5">Platform</div>
+            <div class="col-md-5">
+                <input type="text" class="form-control" id="txtField3" ng-model="queueCtrl.currrentItem.Platform" />
+            </div>
+        </div>
+        <div class="row">
+            <button type="button" class="btn btn-default" ng-click="queueCtrl.Save()">Save</button>
+        </div>
+    </div>
+
+    <queue-manager src="queueCtrl.listOfItems"></queue-manager>
+</div>
