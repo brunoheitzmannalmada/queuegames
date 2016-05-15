@@ -27,5 +27,9 @@
         };
     };
 
+    this.isFormValid = function () {
+        return (this.currrentItem.Name == '' || this.currrentItem.YearLaunch == '' || this.currrentItem.Developer == '' || this.currrentItem.Platform == '');
+    }
+
     this.CleanCurrentItem();
 }]);
