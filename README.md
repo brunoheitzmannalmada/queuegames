@@ -8,7 +8,6 @@ This feature can be used in a lot of scenarios.
 
 * In this repository, I am showing more features of AngularJS, a great and awesome MVW framework!
 * 1.0
-* 
 
 ### How do I get set up? ###
 
@@ -24,7 +23,7 @@ This feature can be used in a lot of scenarios.
 ### Who do I talk to? ###
 
 * Bruno Almada
-* * brunoha@gmail.com
+* * [My e-mail](brunoha@gmail.com)
 * * [My LinkedIn profile](http://linkedin.com/in/brunoalmada)
 * * [My Xing profile](https://www.xing.com/profile/Bruno_HeitzmannAlmada)
 * * [about.me](https://about.me/brunoha)
