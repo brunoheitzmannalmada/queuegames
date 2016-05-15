@@ -13,7 +13,7 @@ namespace QueueGames.WebApi.Controllers
     [EnableCors(origins: "http://localhost:10069", headers: "*", methods: "*")]
     public class ProductsController : ApiController
     {
-        private ProductRepositorie productRepositorie = new ProductRepositorie();
+        private ProductRepository productRepositorie = new ProductRepository();
 
         // GET api/<controller>
         public string Get()

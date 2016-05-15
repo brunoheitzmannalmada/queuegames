@@ -86,9 +86,9 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\Base.cs" />
-    <Compile Include="Repositories\GamesRepositorie.cs" />
+    <Compile Include="Repositories\GamesRepository.cs" />
     <Compile Include="Repositories\IBase.cs" />
-    <Compile Include="Repositories\ProductRepositorie.cs" />
+    <Compile Include="Repositories\ProductRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
