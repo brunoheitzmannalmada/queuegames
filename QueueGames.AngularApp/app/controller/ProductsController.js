@@ -20,7 +20,7 @@
         console.log('Like product');
         this.listOfItems.splice(0, 0, new QueueItem(product.ProductName,
             'Like',
-            $http.post(apiAddress + this.ApiRoute + '/Like', product))
+            $http.post(apiAddress + this.ApiRoute, product))
         );
         $rootScope.$broadcast('openQueueManager', {});
     };
