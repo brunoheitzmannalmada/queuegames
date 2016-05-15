@@ -23,7 +23,7 @@ This feature can be used in a lot of scenarios.
 ### Who do I talk to? ###
 
 * Bruno Almada
-* * [My e-mail](brunoha@gmail.com)
+* * brunoha@gmail.com
 * * [My LinkedIn profile](http://linkedin.com/in/brunoalmada)
 * * [My Xing profile](https://www.xing.com/profile/Bruno_HeitzmannAlmada)
 * * [about.me](https://about.me/brunoha)
