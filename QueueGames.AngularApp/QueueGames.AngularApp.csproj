@@ -70,6 +70,8 @@
     <Content Include="app\class\QueueItem.js" />
     <Content Include="app\controller\ProductsController.js" />
     <Content Include="app\controller\QueueItemController.js" />
+    <Content Include="app\directive\popupwindow\popup-window.html" />
+    <Content Include="app\directive\popupwindow\popupwindow.js" />
     <Content Include="app\directive\queuemanager\queue-manager.css" />
     <Content Include="app\directive\queuemanager\QueueManager.js" />
     <Content Include="app\directive\queuemanager\queue-manager-view.html" />

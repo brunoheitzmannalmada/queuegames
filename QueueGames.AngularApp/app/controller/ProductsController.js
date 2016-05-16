@@ -33,4 +33,16 @@
         );
         $rootScope.$broadcast('openQueueManager', {});
     };
+
+    this.edit = function (product) {
+        $rootScope.$broadcast('openPopupWindow', product);
+    };
+
+    this.newProduct = function () {
+        $rootScope.$broadcast('openPopupWindow', {});
+    };
+
+    this.Include = function () {
+        return '/app/view/ProductEdit.html';
+    };
 }]);

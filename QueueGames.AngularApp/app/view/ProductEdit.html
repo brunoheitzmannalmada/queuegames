@@ -1,23 +1,20 @@
-﻿<div class="table table-striped">
-    <div class="row">
-        <div class="col-md-5">Product name</div>
-        <div class="col-md-5">
-            <input type="text" class="form-control" id="txtField1" ng-model="productCtrl.currrentItem.Name" />
+﻿<form class="form-horizontal">
+    <div class="form-group">
+        <label for="txtProductName" class="col-sm-2 control-label">Product name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="txtProductName" ng-model="dataSource.ProductName" />
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-5">Description</div>
-        <div class="col-md-5">
-            <input type="text" class="form-control" id="txtField2" ng-model="productCtrl.currrentItem.YearLaunch" />
+    <div class="form-group">
+        <label for="txtQuantityPerUnit" class="col-sm-2 control-label">Description</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="txtQuantityPerUnit" ng-model="dataSource.QuantityPerUnit" />
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-5">Price</div>
-        <div class="col-md-5">
-            <input type="text" class="form-control" id="txtField3" ng-model="productCtrl.currrentItem.Developer" />
+    <div class="form-group">
+        <label for="txtPrice" class="col-sm-2 control-label">Price</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="txtPrice" ng-model="dataSource.UnitPrice" />
         </div>
     </div>
-    <div class="row">
-        <button type="button" class="btn btn-default" ng-click="productCtrl.Save()">Save</button>
-    </div>
-</div>
+</form>
