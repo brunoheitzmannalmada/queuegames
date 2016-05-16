@@ -4,6 +4,8 @@ Here is a small project using AngularJS on front end, and ASP.NET Web API in the
 
 This feature can be used in a lot of scenarios. 
 
+Do you know something good to improve this application? That's awesome, I'm looking foward for your ideas! Just fork this repository and send me a pull request!
+
 ### What is this repository for? ###
 
 * In this repository, I am showing more features of AngularJS, a great and awesome MVW framework!
@@ -11,14 +13,8 @@ This feature can be used in a lot of scenarios.
 
 ### How do I get set up? ###
 
-* This repository uses AngularJS, Twitter Bootstrap and jQuery. But it all set up with CDN :)
+* The front end project uses AngularJS, Twitter Bootstrap and jQuery. But it all set up with CDN :)
 * The backend have a .mdf database file inside.
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
 
 ### Who do I talk to? ###
 
