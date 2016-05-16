@@ -17,11 +17,13 @@
                 scope.errorMessage = '';
                 def = $q.defer();
                 popupWindow.modal();
-                scope.dataSource = data;
+                scope.dataSource = data.data;
+                scope.validationFunction = data.validationFunction;
                 event.promise = def.promise;
             });
 
             scope.$on('closePopupWindow', function (event, data) {
+                saveButton.removeAttr('disabled');
                 popupWindow.modal('hide');
 
                 if (data.successMessage) {
@@ -41,10 +43,12 @@
 
             scope.$on('showError', function (event, data) {
                 scope.errorMessage = data.errorMessage;
+                saveButton.removeAttr('disabled');
             });
 
             saveButton.bind('click', function () {
                 scope.errorMessage = '';
+                saveButton.attr('disabled', 'disabled')
                 def.notify(scope.dataSource);
             });
         }

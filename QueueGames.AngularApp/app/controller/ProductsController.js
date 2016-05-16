@@ -37,9 +37,21 @@
         var apiRoute = this.ApiRoute;
         var currentProduct = product;
         var promise = ($rootScope.$broadcast('openPopupWindow', {
-            ProductName: product.ProductName,
-            QuantityPerUnit: product.QuantityPerUnit,
-            UnitPrice: product.UnitPrice
+            data: {
+                ProductID: product.ProductID,
+                ProductName: product.ProductName,
+                SupplierID: product.SupplierID,
+                CategoryID: product.CategoryID,
+                QuantityPerUnit: product.QuantityPerUnit,
+                UnitPrice: product.UnitPrice,
+                UnitsInStock: product.UnitsInStock,
+                UnitsOnOrder: product.UnitsOnOrder,
+                ReorderLevel:product.ReorderLevel,
+                Discontinued: product.Discontinued
+            },
+            validationFunction: function (validateIt) {
+                return (validateIt.ProductName == '' || validateIt.QuantityPerUnit == '' || validateIt.UnitPrice == '');
+            }
         })).promise;
 
         promise.then(function successCallback(result) { },
@@ -62,9 +74,14 @@
     this.newProduct = function () {
         var apiRoute = this.ApiRoute;
         var promise = $rootScope.$broadcast('openPopupWindow', {
-            ProductName: '',
-            QuantityPerUnit: '',
-            UnitPrice: ''
+            data: {
+                ProductName: '',
+                QuantityPerUnit: '',
+                UnitPrice: ''
+            },
+            validationFunction: function (validateIt) {
+                return (validateIt.ProductName == '' || validateIt.QuantityPerUnit == '' || validateIt.UnitPrice == '');
+            }
         }).promise;
 
         promise.then(function successCallback(result) { },

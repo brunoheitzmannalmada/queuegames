@@ -1,7 +1,9 @@
 ﻿<link href="/Content/Products.css" rel="stylesheet" />
 
 <div ng-controller="ProductsController as productCtrl" ng-init="productCtrl.init()">
-    <popup-window path="productCtrl.Include()" popup-title="Product" src="Products"></popup-window>
+    <popup-window path="productCtrl.Include()" 
+                  popup-title="Product" 
+                  src="Products"></popup-window>
     <button class="btn btn-primary" ng-click="productCtrl.newProduct()">New product</button>
     <table class="table table-striped">
         <thead>
