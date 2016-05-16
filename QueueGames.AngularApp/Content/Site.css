@@ -82,3 +82,11 @@ input[type="checkbox"].input-validation-error {
     transform: rotate(359deg);
   }
 }
+
+/* POPUP WINDOW*/
+.popupmessage {
+    display: none;
+    position: fixed !important;
+    left: 25%;
+    z-index: 50;
+}

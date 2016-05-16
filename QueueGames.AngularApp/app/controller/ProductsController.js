@@ -9,7 +9,6 @@
         console.log('Init products controller');
         $http.get(apiAddress + this.ApiRoute)
         .then(function successCallback(result) {
-            //console.log();
             productsCtrl.Products = JSON.parse(result.data);
         }, function errorCallback(result) {
 
@@ -35,11 +34,46 @@
     };
 
     this.edit = function (product) {
-        $rootScope.$broadcast('openPopupWindow', product);
+        var apiRoute = this.ApiRoute;
+        var promise = ($rootScope.$broadcast('openPopupWindow', {
+            ProductName: product.ProductName,
+            QuantityPerUnit: product.QuantityPerUnit,
+            UnitPrice: product.UnitPrice
+        })).promise;
+
+        promise.then(function successCallback(result) { },
+            function errorCallback(result) { },
+            function notificationCallback(result) {
+                $http.post(apiAddress + apiRoute)
+                .then(function successCallback(result) {
+                    $rootScope.$broadcast('closePopupWindow', { successMessage: 'The product was edited!' });
+                },
+                function errorCallback(result) {
+                    $rootScope.$broadcast('showError', { errorMessage: 'There was an error saving the product' });
+                });
+        });
     };
 
     this.newProduct = function () {
-        $rootScope.$broadcast('openPopupWindow', {});
+        var apiRoute = this.ApiRoute;
+        var promise = $rootScope.$broadcast('openPopupWindow', {
+            ProductName: '',
+            QuantityPerUnit: '',
+            UnitPrice: ''
+        }).promise;
+
+        promise.then(function successCallback(result) { },
+            function errorCallback(result) { },
+            function notificationCallback(result) {
+                $http.post(apiAddress + apiRoute)
+                .then(function successCallback(result) {
+                    $rootScope.$broadcast('closePopupWindow', { successMessage: 'The product was added!' });
+                },
+                function errorCallback(result) {
+                    $rootScope.$broadcast('showError', { errorMessage: 'There was an error saving the product' });
+                });
+            }
+        );
     };
 
     this.Include = function () {
