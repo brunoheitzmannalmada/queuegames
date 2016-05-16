@@ -34,6 +34,11 @@
                 };
             });
 
+            popupWindow.on('hide.bs.modal', function (e) {
+                def.resolve();
+                def = null;
+            });
+
             scope.$on('showError', function (event, data) {
                 scope.errorMessage = data.errorMessage;
             });

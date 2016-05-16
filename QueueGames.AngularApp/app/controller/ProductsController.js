@@ -35,6 +35,7 @@
 
     this.edit = function (product) {
         var apiRoute = this.ApiRoute;
+        var currentProduct = product;
         var promise = ($rootScope.$broadcast('openPopupWindow', {
             ProductName: product.ProductName,
             QuantityPerUnit: product.QuantityPerUnit,
@@ -44,8 +45,12 @@
         promise.then(function successCallback(result) { },
             function errorCallback(result) { },
             function notificationCallback(result) {
-                $http.post(apiAddress + apiRoute)
+                var productFromPopup = result;
+                $http.post(apiAddress + apiRoute, result)
                 .then(function successCallback(result) {
+                    currentProduct.ProductName = productFromPopup.ProductName;
+                    currentProduct.QuantityPerUnit = productFromPopup.QuantityPerUnit;
+                    currentProduct.UnitPrice = productFromPopup.UnitPrice;
                     $rootScope.$broadcast('closePopupWindow', { successMessage: 'The product was edited!' });
                 },
                 function errorCallback(result) {
@@ -65,7 +70,7 @@
         promise.then(function successCallback(result) { },
             function errorCallback(result) { },
             function notificationCallback(result) {
-                $http.post(apiAddress + apiRoute)
+                $http.post(apiAddress + apiRoute, result)
                 .then(function successCallback(result) {
                     $rootScope.$broadcast('closePopupWindow', { successMessage: 'The product was added!' });
                 },

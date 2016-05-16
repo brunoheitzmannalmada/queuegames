@@ -26,8 +26,6 @@
                 }
             };
 
-            
-
             scope.$on('openQueueManager', function (event, data) {
                 mainWindow.css('display', 'block');
             });

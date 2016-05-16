@@ -87,6 +87,9 @@ input[type="checkbox"].input-validation-error {
 .popupmessage {
     display: none;
     position: fixed !important;
-    left: 25%;
     z-index: 50;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
 }
