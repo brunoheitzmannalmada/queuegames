@@ -8,10 +8,12 @@
 
     post.then(function successCallback(response) {
         queueItem.status = 2;
-        queueItem.sCallback();
+        if (queueItem.sCallback)
+            queueItem.sCallback();
     }, function errorCallback(response) {
         queueItem.status = 3;
-        queueItem.eCallback();
+        if (queueItem.eCallback)
+            queueItem.eCallback();
     });
 
     return this;

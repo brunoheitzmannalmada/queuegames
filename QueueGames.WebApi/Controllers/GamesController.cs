@@ -33,7 +33,7 @@ namespace QueueGames.WebApi.Controllers
             try
             {
                 gamesRepositorie.Insert(game);
-                return Ok();
+                return Ok(game.Id);
             }
             catch (Exception)
             {

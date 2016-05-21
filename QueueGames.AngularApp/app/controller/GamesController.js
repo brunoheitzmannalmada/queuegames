@@ -52,6 +52,7 @@
                 $http.post(apiAddress + apiRoute, result)
                 .then(function successCallback(result) {
                     $rootScope.$broadcast('closePopupWindow', { successMessage: 'The game was added!' });
+                    gameToBeAdded.Id = result.data;
                     gamesCtrl.Games.push(gameToBeAdded);
                 },
                 function errorCallback(result) {

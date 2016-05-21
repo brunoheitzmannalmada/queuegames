@@ -83,7 +83,7 @@ input[type="checkbox"].input-validation-error {
   }
 }
 
-/* POPUP WINDOW*/
+/* POPUP WINDOW */
 .popupmessage {
     display: none;
     position: fixed !important;
@@ -94,7 +94,7 @@ input[type="checkbox"].input-validation-error {
     margin-left: auto;
 }
 
-/* ICONS*/
+/* ICONS */
 .icon {
     font-size: 1.5em;
     cursor: pointer;
@@ -110,5 +110,43 @@ input[type="checkbox"].input-validation-error {
 }
 
 .remove {
+    color: red;
+}
+
+/* QUEUE MANAGER */
+.queueManager {
+    position: fixed; 
+    right: 0; 
+    bottom: 0; 
+    background-color: #eeeeee; 
+    width: 400px;
+    max-height: 300px;
+    display: none;
+}
+
+.queueManager .command {
+    background-color: yellow;
+    text-align: right;
+    width: 100%;
+    z-index: 50;
+}
+.queueManager .command .minimizeButton {
+    cursor: pointer;
+    right: 5px;
+}
+.queueManager .command .closeButton {
+    cursor: pointer;
+}
+
+.queueManager .list {
+    overflow-y: scroll;
+    height: 250px;
+}
+
+.statusOK {
+    color: green;
+}
+
+.statusError {
     color: red;
 }
