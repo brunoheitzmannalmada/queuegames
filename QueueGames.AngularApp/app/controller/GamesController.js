@@ -3,6 +3,7 @@
     this.listOfGames = [];
     this.Games = [];
     this.ApiRoute = 'Games';
+    this.error = false;
 
     this.init = function () {
         console.log('Init games controller');
@@ -10,7 +11,7 @@
         .then(function successCallback(result) {
             gamesCtrl.Games = JSON.parse(result.data);
         }, function errorCallback(result) {
-
+            gamesCtrl.error = true;
         });
     };
 

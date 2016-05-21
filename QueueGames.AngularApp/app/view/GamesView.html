@@ -13,10 +13,18 @@
                 <th><i class="glyphicon glyphicon-cog" style="font-size: 1.5em;"></i></th>
             </tr>
         </thead>
-        <tbody ng-show="gamesCtrl.Games.length < 1">
-            <tr>
+        <tbody ng-show="gamesCtrl.Games.length < 1 && !gamesCtrl.error">
+            <tr class="info">
                 <td colspan="5" class="text-center">
                     <i class="glyphicon glyphicon-refresh rotate-icon" style="font-size: 2em;"></i>
+                </td>
+            </tr>
+        </tbody>
+        <tbody ng-show="gamesCtrl.error">
+            <tr class="danger">
+                <td colspan="5" class="text-center">
+                    <i class="glyphicon glyphicon-remove-sign remove"></i>
+                    There was an error while retrieving the list of games
                 </td>
             </tr>
         </tbody>
@@ -28,7 +36,7 @@
                 <td class="col-md-2">{{game.Platform}}</td>
                 <td class="col-md-2">
                     <i class="glyphicon glyphicon-pencil icon" title="Edit" ng-click="gamesCtrl.edit(game)"></i>
-                    <i class="glyphicon glyphicon-minus icon remove" title="Delete" ng-click="gamesCtrl.delete(game)"></i>
+                    <i class="glyphicon glyphicon-trash icon remove" title="Delete" ng-click="gamesCtrl.delete(game)"></i>
                     <i class="glyphicon glyphicon-thumbs-up icon like" title="Like" ng-click="gamesCtrl.like(game)"></i>
                     <i class="glyphicon glyphicon-shopping-cart icon buy" title="Buy" ng-click="gamesCtrl.buy(game)"></i>
                 </td>

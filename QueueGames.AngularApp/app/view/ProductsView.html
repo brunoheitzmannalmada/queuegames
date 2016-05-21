@@ -12,10 +12,18 @@
                 <th><i class="glyphicon glyphicon-cog" style="font-size: 1.5em;"></i></th>
             </tr>
         </thead>
-        <tbody ng-show="productCtrl.Products.length < 1">
+        <tbody ng-show="productCtrl.Products.length < 1 && !productCtrl.error">
             <tr>
                 <td colspan="4" class="text-center">
                     <i class="glyphicon glyphicon-refresh rotate-icon" style="font-size: 2em;"></i>
+                </td>
+            </tr>
+        </tbody>
+        <tbody ng-show="productCtrl.error">
+            <tr class="danger">
+                <td colspan="4" class="text-center">
+                    <i class="glyphicon glyphicon-remove-sign remove"></i>
+                    There was an error while retrieving the list of products
                 </td>
             </tr>
         </tbody>

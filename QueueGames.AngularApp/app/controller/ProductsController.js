@@ -4,6 +4,7 @@
     this.Products = [];
     this.currrentItem = {};
     this.ApiRoute = 'Products';
+    this.error = false;
 
     this.init = function () {
         console.log('Init products controller');
@@ -11,7 +12,7 @@
         .then(function successCallback(result) {
             productsCtrl.Products = JSON.parse(result.data);
         }, function errorCallback(result) {
-
+            productsCtrl.error = true;
         });
     };
 
