@@ -30,12 +30,15 @@ namespace QueueGames.WebApi.Controllers
         // POST api/games
         public IHttpActionResult Post([FromBody]Games game)
         {
-            System.Threading.Thread.Sleep(1500);
-
-            if ((DateTime.Now.Millisecond % 2) > 0)
+            try
+            {
+                gamesRepositorie.Insert(game);
                 return Ok();
-            else
+            }
+            catch (Exception)
+            {
                 return InternalServerError();
+            }
         }
 
         // PUT api/games/5

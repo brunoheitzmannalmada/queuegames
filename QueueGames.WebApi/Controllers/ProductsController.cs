@@ -40,6 +40,7 @@ namespace QueueGames.WebApi.Controllers
                 return InternalServerError();
         }
 
+        [HttpPut]
         // PUT api/<controller>/5
         public void Put(int id, [FromBody]string value)
         {

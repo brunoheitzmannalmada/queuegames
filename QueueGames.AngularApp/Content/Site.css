@@ -93,3 +93,22 @@ input[type="checkbox"].input-validation-error {
     margin-right: auto;
     margin-left: auto;
 }
+
+/* ICONS*/
+.icon {
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.buy {
+    color: green;
+}
+
+.like {
+    color: blue;
+}
+
+.remove {
+    color: red;
+}

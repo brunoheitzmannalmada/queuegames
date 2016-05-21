@@ -1,0 +1,26 @@
+﻿<form class="form-horizontal">
+    <div class="form-group" ng-class="{'has-success': dataSource.Name != '' }">
+        <label for="txtField1" class="col-sm-2 control-label">Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="txtName" placeholder="Name of the game" ng-model="dataSource.Name">
+        </div>
+    </div>
+    <div class="form-group" ng-class="{'has-success': dataSource.YearLaunch != '' }">
+        <label for="txtField2" class="col-sm-2 control-label">Year lauch</label>
+        <div class="col-sm-10">
+            <input type="number" class="form-control" id="txtYearLaunch" ng-model="dataSource.YearLaunch">
+        </div>
+    </div>
+    <div class="form-group" ng-class="{'has-success': dataSource.Developer != '' }">
+        <label for="txtField3" class="col-sm-2 control-label">Developer</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="txtDeveloper" ng-model="dataSource.Developer">
+        </div>
+    </div>
+    <div class="form-group" ng-class="{'has-success': dataSource.Platform != '' }">
+        <label for="txtField3" class="col-sm-2 control-label">Platform</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="txtPlatform" ng-model="dataSource.Platform">
+        </div>
+    </div>
+</form>

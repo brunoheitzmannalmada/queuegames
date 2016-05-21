@@ -19,7 +19,7 @@
         console.log('Like product');
         this.listOfItems.splice(0, 0, new QueueItem(product.ProductName,
             'Like',
-            $http.post(apiAddress + this.ApiRoute, product))
+            $http.post(apiAddress + 'Like', product))
         );
         $rootScope.$broadcast('openQueueManager', {});
     };
@@ -28,7 +28,7 @@
         console.log('Buy product');
         this.listOfItems.splice(0, 0, new QueueItem(product.ProductName,
             'Buy',
-            $http.post(apiAddress + this.ApiRoute, product))
+            $http.post(apiAddress + 'Buy', product))
         );
         $rootScope.$broadcast('openQueueManager', {});
     };
@@ -90,6 +90,7 @@
                 $http.post(apiAddress + apiRoute, result)
                 .then(function successCallback(result) {
                     $rootScope.$broadcast('closePopupWindow', { successMessage: 'The product was added!' });
+                    productsCtrl.Products.slice(-1, 0, result);
                 },
                 function errorCallback(result) {
                     $rootScope.$broadcast('showError', { errorMessage: 'There was an error saving the product' });

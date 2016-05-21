@@ -3,8 +3,8 @@
 
   $routeProvider
       .when('/', {
-        templateUrl: '/app/view/queueListView.html',
-        controller: 'QueueListController'
+        templateUrl: '/app/view/GamesView.html',
+        controller: 'GamesController'
       })
       .when('/Products', {
         templateUrl: '/app/view/ProductsView.html',

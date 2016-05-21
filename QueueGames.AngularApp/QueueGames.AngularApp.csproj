@@ -68,6 +68,7 @@
   <ItemGroup>
     <Content Include="app\app.js" />
     <Content Include="app\class\QueueItem.js" />
+    <Content Include="app\controller\GamesController.js" />
     <Content Include="app\controller\ProductsController.js" />
     <Content Include="app\controller\QueueItemController.js" />
     <Content Include="app\directive\popupwindow\popup-window.html" />
@@ -76,12 +77,13 @@
     <Content Include="app\directive\queuemanager\QueueManager.js" />
     <Content Include="app\directive\queuemanager\queue-manager-view.html" />
     <Content Include="app\service\QueueItemService.js" />
+    <Content Include="app\view\GamesCreateEdit.html" />
+    <Content Include="app\view\GamesView.html" />
     <Content Include="app\view\ProductEdit.html" />
     <Content Include="app\view\ProductsView.html" />
     <Content Include="app\view\queueListView.html" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Products.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Index.html" />
     <Content Include="Web.config">
