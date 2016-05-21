@@ -54,6 +54,16 @@ namespace QueueGames.Data.Repositories
             ContextEntities.SaveChanges();
         }
 
+        public void Delete(int id)
+        {
+            var exists = ContextEntities.Set<T>().Find(id);
+            if (exists != null)
+            {
+                ContextEntities.Set<T>().Remove(exists);
+                ContextEntities.SaveChanges();
+            }
+        }
+
         public T Find(Expression<Func<T, bool>> matchExpression)
         {
             return ContextEntities.Set<T>().SingleOrDefault(matchExpression);

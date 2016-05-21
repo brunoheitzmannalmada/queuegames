@@ -12,6 +12,7 @@ namespace QueueGames.Data.Repositories
         T Get(int id);
         T Update(T entity, int id);
         void Delete(T entity);
+        void Delete(int id);
         IEnumerable<T> GetAll();
     }
 }

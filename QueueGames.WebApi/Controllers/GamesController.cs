@@ -42,13 +42,35 @@ namespace QueueGames.WebApi.Controllers
         }
 
         // PUT api/games/5
-        public void Put(int id, [FromBody]Games game)
+        [HttpPut]
+        public IHttpActionResult Put(int id, [FromBody]Games game)
         {
+            try
+            {
+                System.Threading.Thread.Sleep(1000);
+                gamesRepositorie.Update(game, id);
+                return Ok();
+            }
+            catch (Exception)
+            {
+                return InternalServerError();
+            }
         }
 
         // DELETE api/games/5
-        public void Delete(int id)
+        [HttpDelete]
+        public IHttpActionResult Delete(int id)
         {
+            try
+            {
+                System.Threading.Thread.Sleep(1000);
+                gamesRepositorie.Delete(id);
+                return Ok();
+            }
+            catch (Exception)
+            {
+                return InternalServerError();
+            }
         }
     }
 }
