@@ -6,6 +6,16 @@
     this.ApiRoute = 'Products';
     this.error = false;
 
+    var validateProductForm = function (validateIt) {
+        return (validateIt.ProductName == '' ||
+            validateIt.ProductName == null ||
+            validateIt.QuantityPerUnit == '' ||
+            validateIt.QuantityPerUnit == null ||
+            validateIt.UnitPrice == '' ||
+            validateIt.UnitPrice == null ||
+            isNaN(validateIt.UnitPrice));
+    };
+
     this.init = function () {
         $http.get(apiAddress + this.ApiRoute)
         .then(function successCallback(result) {
@@ -47,9 +57,7 @@
                 ReorderLevel:product.ReorderLevel,
                 Discontinued: product.Discontinued
             },
-            validationFunction: function (validateIt) {
-                return (validateIt.ProductName == '' || validateIt.QuantityPerUnit == '' || validateIt.UnitPrice == '');
-            }
+            validationFunction: validateProductForm
         })).promise;
 
         promise.then(function successCallback(result) { },
@@ -77,9 +85,7 @@
                 QuantityPerUnit: '',
                 UnitPrice: ''
             },
-            validationFunction: function (validateIt) {
-                return (validateIt.ProductName == '' || validateIt.QuantityPerUnit == '' || validateIt.UnitPrice == '');
-            }
+            validationFunction: validateProductForm
         }).promise;
 
         promise.then(function successCallback(result) { },

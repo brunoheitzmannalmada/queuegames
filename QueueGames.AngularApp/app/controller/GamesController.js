@@ -5,6 +5,17 @@
     this.ApiRoute = 'Games';
     this.error = false;
 
+    var validateGamesForm = function (validateIt) {
+        return (validateIt.Name == '' ||
+            validateIt.Name == null ||
+            validateIt.YearLaunch == '' ||
+            validateIt.YearLaunch == null ||
+            validateIt.Developer == '' ||
+            validateIt.Developer == null ||
+            validateIt.Platform == '' ||
+            validateIt.Platform == null);
+    };
+
     this.init = function () {
         $http.get(apiAddress + this.ApiRoute)
         .then(function successCallback(result) {
@@ -39,9 +50,7 @@
                 Developer: '',
                 Platform: ''
             },
-            validationFunction: function (validateIt) {
-                return validateIt.Name == '' || validateIt.YearLaunch == '' && validateIt.Developer == '' || validateIt.Platform == '';
-            }
+            validationFunction: validateGamesForm
         }).promise;
 
         promise.then(function successCallback(result) { },
@@ -71,9 +80,7 @@
                 Developer: game.Developer,
                 Platform: game.Platform
             },
-            validationFunction: function (validateIt) {
-                return (validateIt.Name == '' || validateIt.YearLaunch == '' || validateIt.Developer == '' || validateIt.Platform == '');
-            }
+            validationFunction: validateGamesForm
         })).promise;
 
         promise.then(function successCallback(result) { },
