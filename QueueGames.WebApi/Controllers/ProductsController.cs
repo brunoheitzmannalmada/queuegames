@@ -32,12 +32,15 @@ namespace QueueGames.WebApi.Controllers
         // POST api/<controller>
         public IHttpActionResult Post([FromBody]Products product)
         {
-            System.Threading.Thread.Sleep(1500);
-
-            if ((DateTime.Now.Millisecond % 2) > 0)
-                return Ok();
-            else
+            try
+            {
+                productRepositorie.Insert(product);
+                return Ok(product.ProductID);
+            }
+            catch (Exception ex)
+            {
                 return InternalServerError();
+            }   
         }
 
         [HttpPut]

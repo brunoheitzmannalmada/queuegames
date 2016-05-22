@@ -88,10 +88,12 @@
         promise.then(function successCallback(result) { },
             function errorCallback(result) { },
             function notificationCallback(result) {
+                var productToBeAdded = result;
                 $http.post(apiAddress + apiRoute, result)
                 .then(function successCallback(result) {
                     $rootScope.$broadcast('closePopupWindow', { successMessage: 'The product was added!' });
-                    productsCtrl.Products.slice(-1, 0, result);
+                    productToBeAdded.ProductID = result.data;
+                    productsCtrl.Products.push(productToBeAdded);
                 },
                 function errorCallback(result) {
                     $rootScope.$broadcast('showError', { errorMessage: 'There was an error saving the product' });
