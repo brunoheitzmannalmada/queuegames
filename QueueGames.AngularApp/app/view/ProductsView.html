@@ -1,6 +1,6 @@
 ﻿<div ng-controller="ProductsController as productCtrl" ng-init="productCtrl.init()">
     <popup-window path="productCtrl.Include()" 
-                  popup-title="Product" 
+                  popup-title="'Product'" 
                   src="Products"></popup-window>
     <button class="btn btn-primary" ng-click="productCtrl.newProduct()">New product</button>
     <table class="table table-striped">
@@ -34,6 +34,7 @@
                 <td class="col-md-2">{{product.UnitPrice | currency:"USD$"}}</td>
                 <td class="col-md-2">
                     <i class="glyphicon glyphicon-pencil icon" title="Edit" ng-click="productCtrl.edit(product)"></i>
+                    <i class="glyphicon glyphicon-trash icon" title="Delete" ng-click="productCtrl.delete(product)"></i>
                     <i class="glyphicon glyphicon-thumbs-up icon like" title="Like" ng-click="productCtrl.like(product)"></i>
                     <i class="glyphicon glyphicon-shopping-cart icon buy" title="Buy" ng-click="productCtrl.buy(product)"></i>
                 </td>

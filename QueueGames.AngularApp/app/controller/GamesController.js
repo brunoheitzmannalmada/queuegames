@@ -6,7 +6,6 @@
     this.error = false;
 
     this.init = function () {
-        console.log('Init games controller');
         $http.get(apiAddress + this.ApiRoute)
         .then(function successCallback(result) {
             gamesCtrl.Games = JSON.parse(result.data);
@@ -102,8 +101,7 @@
         this.listOfGames.splice(0, 0, new QueueItem(game.Name,
             'Delete',
             $http.delete(apiAddress + gamesCtrl.ApiRoute + '/delete/' + game.Id),
-            fnCallback
-            )
+            fnCallback)
         );
         $rootScope.$broadcast('openQueueManager', {});
     };

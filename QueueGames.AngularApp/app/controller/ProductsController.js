@@ -7,7 +7,6 @@
     this.error = false;
 
     this.init = function () {
-        console.log('Init products controller');
         $http.get(apiAddress + this.ApiRoute)
         .then(function successCallback(result) {
             productsCtrl.Products = JSON.parse(result.data);
@@ -17,7 +16,6 @@
     };
 
     this.like = function (product) {
-        console.log('Like product');
         this.listOfItems.splice(0, 0, new QueueItem(product.ProductName,
             'Like',
             $http.post(apiAddress + 'Like', product))
@@ -26,7 +24,6 @@
     };
 
     this.buy = function (product) {
-        console.log('Buy product');
         this.listOfItems.splice(0, 0, new QueueItem(product.ProductName,
             'Buy',
             $http.post(apiAddress + 'Buy', product))
@@ -59,7 +56,7 @@
             function errorCallback(result) { },
             function notificationCallback(result) {
                 var productFromPopup = result;
-                $http.post(apiAddress + apiRoute, result)
+                $http.put(apiAddress + apiRoute + '/put/?id=' + productFromPopup.ProductID, JSON.stringify(result))
                 .then(function successCallback(result) {
                     currentProduct.ProductName = productFromPopup.ProductName;
                     currentProduct.QuantityPerUnit = productFromPopup.QuantityPerUnit;
@@ -100,6 +97,18 @@
                 });
             }
         );
+    };
+
+    this.delete = function (product) {
+        var fnCallback = function () {
+            productsCtrl.Products.splice(productsCtrl.Products.indexOf(product), 1);
+        };
+        productsCtrl.listOfItems.splice(0, 0, new QueueItem(product.ProductName,
+            'Delete',
+            $http.delete(apiAddress + productsCtrl.ApiRoute + '/delete/' + product.ProductID),
+            fnCallback)
+        );
+        $rootScope.$broadcast('openQueueManager', {});
     };
 
     this.Include = function () {

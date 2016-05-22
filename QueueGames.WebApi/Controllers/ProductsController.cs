@@ -45,13 +45,33 @@ namespace QueueGames.WebApi.Controllers
 
         [HttpPut]
         // PUT api/<controller>/5
-        public void Put(int id, [FromBody]string value)
+        public IHttpActionResult Put(int id, [FromBody]Products product)
         {
+            try
+            {
+                System.Threading.Thread.Sleep(1000);
+                productRepositorie.Update(product, id);
+                return Ok();
+            }
+            catch (Exception)
+            {
+                return InternalServerError();
+            }
         }
 
         // DELETE api/<controller>/5
-        public void Delete(int id)
+        public IHttpActionResult Delete(int id)
         {
+            try
+            {
+                System.Threading.Thread.Sleep(1000);
+                productRepositorie.Delete(id);
+                return Ok();
+            }
+            catch (Exception)
+            {
+                return InternalServerError();
+            }
         }
     }
 }

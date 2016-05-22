@@ -2,25 +2,25 @@
     <div class="form-group" ng-class="{'has-success': dataSource.Name != '' }">
         <label for="txtField1" class="col-sm-2 control-label">Name</label>
         <div class="col-sm-10">
-            <input type="text" class="form-control" id="txtName" placeholder="Name of the game" ng-model="dataSource.Name">
+            <input type="text" class="form-control" id="txtName" placeholder="Name of the game" ng-model="dataSource.Name" ng-maxlength="100">
         </div>
     </div>
     <div class="form-group" ng-class="{'has-success': dataSource.YearLaunch != '' }">
         <label for="txtField2" class="col-sm-2 control-label">Year lauch</label>
         <div class="col-sm-10">
-            <input type="number" class="form-control" id="txtYearLaunch" ng-model="dataSource.YearLaunch">
+            <input type="number" class="form-control" id="txtYearLaunch" ng-model="dataSource.YearLaunch" ng-maxlength="100">
         </div>
     </div>
-    <div class="form-group" ng-class="{'has-success': dataSource.Developer != ''">
+    <div class="form-group" ng-class="{'has-success': dataSource.Developer != '' }">
         <label for="txtField3" class="col-sm-2 control-label">Developer</label>
         <div class="col-sm-10">
-            <input type="text" class="form-control" id="txtDeveloper" ng-model="dataSource.Developer">
+            <input type="text" class="form-control" id="txtDeveloper" ng-model="dataSource.Developer" ng-maxlength="100">
         </div>
     </div>
     <div class="form-group" ng-class="{'has-success': dataSource.Platform != '' }">
         <label for="txtField3" class="col-sm-2 control-label">Platform</label>
         <div class="col-sm-10">
-            <input type="text" class="form-control" id="txtPlatform" ng-model="dataSource.Platform">
+            <input type="text" class="form-control" id="txtPlatform" ng-model="dataSource.Platform" ng-maxlength="100">
         </div>
     </div>
 </form>

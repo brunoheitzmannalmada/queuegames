@@ -1,5 +1,5 @@
 ﻿<form name="form" class="form-horizontal">
-    <div class="form-group" ng-class="{'has-success': dataSource.ProductName != '', 'has-error': !form.txtProductName.$valid }" >
+    <div class="form-group" ng-class="{'has-success': dataSource.ProductName != '', 'has-error': !form.txtProductName.$valid }">
         <label for="txtProductName" class="col-sm-2 control-label">Product name</label>
         <div class="col-sm-10">
             <input type="text" class="form-control" id="txtProductName" name="txtProductName" ng-model="dataSource.ProductName" ng-maxlength="40" />
