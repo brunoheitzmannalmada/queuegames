@@ -23,7 +23,3 @@ Do you know something good to improve this application? That's awesome, I'm look
 * * [My LinkedIn profile](http://linkedin.com/in/brunoalmada)
 * * [My Xing profile](https://www.xing.com/profile/Bruno_HeitzmannAlmada)
 * * [about.me](https://about.me/brunoha)
-
-
-![Image1Test.PNG](https://bitbucket.org/repo/LBpMno/images/1667208138-Image1Test.PNG)
-![Image2Test.PNG](https://bitbucket.org/repo/LBpMno/images/2989111555-Image2Test.PNG)
