@@ -6,6 +6,8 @@ This feature can be used in a lot of scenarios.
 
 Do you know something good to improve this application? That's awesome, I'm looking foward for your ideas! Just fork this repository and send me a pull request!
 
+**License**: MIT
+
 ### What is this repository for? ###
 
 * In this repository, I am showing more features of AngularJS, a great and awesome MVW framework!
@@ -14,7 +16,7 @@ Do you know something good to improve this application? That's awesome, I'm look
 ### How do I get set up? ###
 
 * The front end project uses AngularJS, Twitter Bootstrap and jQuery. But it all set up with CDN :)
-* The backend have a .mdf database file inside.
+* The backend have a .mdf database file inside (I will improve this).
 
 ### Who do I talk to? ###
 
