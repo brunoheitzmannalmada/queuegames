@@ -26,19 +26,19 @@
     };
 
     this.like = function (product) {
-        this.listOfItems.splice(0, 0, new QueueItem(product.ProductName,
+        //this.listOfItems.splice(0, 0, );
+        $rootScope.$broadcast('openQueueManager', new QueueItem(product.ProductName,
             'Like',
             $http.post(apiAddress + 'Like', product))
         );
-        $rootScope.$broadcast('openQueueManager', {});
     };
 
     this.buy = function (product) {
-        this.listOfItems.splice(0, 0, new QueueItem(product.ProductName,
+        //this.listOfItems.splice(0, 0, );
+        $rootScope.$broadcast('openQueueManager', new QueueItem(product.ProductName,
             'Buy',
             $http.post(apiAddress + 'Buy', product))
         );
-        $rootScope.$broadcast('openQueueManager', {});
     };
 
     this.edit = function (product) {
@@ -109,12 +109,12 @@
         var fnCallback = function () {
             productsCtrl.Products.splice(productsCtrl.Products.indexOf(product), 1);
         };
-        productsCtrl.listOfItems.splice(0, 0, new QueueItem(product.ProductName,
+        //productsCtrl.listOfItems.splice(0, 0, );
+        $rootScope.$broadcast('openQueueManager', new QueueItem(product.ProductName,
             'Delete',
             $http.delete(apiAddress + productsCtrl.ApiRoute + '/delete/' + product.ProductID),
             fnCallback)
         );
-        $rootScope.$broadcast('openQueueManager', {});
     };
 
     this.Include = function () {

@@ -26,19 +26,19 @@
     };
 
     this.like = function (game) {
-        gamesCtrl.listOfGames.splice(0, 0, new QueueItem(game.Name,
+        var like = new QueueItem(game.Name,
             'Like',
-            $http.post(apiAddress + 'Like', game))
-        );
-        $rootScope.$broadcast('openQueueManager', {});
+            $http.post(apiAddress + 'Like', game));
+        //gamesCtrl.listOfGames.splice(0, 0, like);
+        $rootScope.$broadcast('openQueueManager', like);
     };
 
     this.buy = function (game) {
-        gamesCtrl.listOfGames.splice(0, 0, new QueueItem(game.Name,
+        var buy = new QueueItem(game.Name,
             'Buy',
-            $http.post(apiAddress + 'Buy', game))
-        );
-        $rootScope.$broadcast('openQueueManager', {});
+            $http.post(apiAddress + 'Buy', game));
+        //gamesCtrl.listOfGames.splice(0, 0, buy);
+        $rootScope.$broadcast('openQueueManager', buy);
     };
 
     this.new = function () {
@@ -105,12 +105,12 @@
         var fnCallback = function () {
             gamesCtrl.Games.splice(gamesCtrl.Games.indexOf(game), 1);
         };
-        this.listOfGames.splice(0, 0, new QueueItem(game.Name,
+        var del = new QueueItem(game.Name,
             'Delete',
             $http.delete(apiAddress + gamesCtrl.ApiRoute + '/delete/' + game.Id),
-            fnCallback)
-        );
-        $rootScope.$broadcast('openQueueManager', {});
+            fnCallback);
+        //this.listOfGames.splice(0, 0, del);
+        $rootScope.$broadcast('openQueueManager', del);
     };
 
     this.Include = function () {
