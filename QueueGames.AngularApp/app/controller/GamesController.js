@@ -29,7 +29,6 @@
         var like = new QueueItem(game.Name,
             'Like',
             $http.post(apiAddress + 'Like', game));
-        //gamesCtrl.listOfGames.splice(0, 0, like);
         $rootScope.$broadcast('openQueueManager', like);
     };
 
@@ -37,7 +36,6 @@
         var buy = new QueueItem(game.Name,
             'Buy',
             $http.post(apiAddress + 'Buy', game));
-        //gamesCtrl.listOfGames.splice(0, 0, buy);
         $rootScope.$broadcast('openQueueManager', buy);
     };
 
@@ -109,7 +107,6 @@
             'Delete',
             $http.delete(apiAddress + gamesCtrl.ApiRoute + '/delete/' + game.Id),
             fnCallback);
-        //this.listOfGames.splice(0, 0, del);
         $rootScope.$broadcast('openQueueManager', del);
     };
 
