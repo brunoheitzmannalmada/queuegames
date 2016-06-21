@@ -4,7 +4,7 @@ Here is a small project using AngularJS on front end, and ASP.NET Web API in the
 
 This feature can be used in a lot of scenarios. 
 
-Do you know something good to improve this application? That's awesome, I'm looking foward for your ideas! Just fork this repository and send me a pull request!
+Do you know something good to improve this application? That's awesome, I'm looking forward for your ideas! Just fork this repository and send me a pull request!
 
 **License**: MIT
 
