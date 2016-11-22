@@ -1,4 +1,4 @@
-﻿using QueueGames.Data.Context;
+﻿using QueueGames.Data.CodeFirst.Context;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,15 +6,15 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QueueGames.Data.Repositories
+namespace QueueGames.Data.CodeFirst.Repositories
 {
     public class Base<T> : IBase<T> where T : class
     {
-        protected QueueGamesEntities ContextEntities;
+        protected QueueGamesContext ContextEntities;
 
         public Base()
         {
-            ContextEntities = new QueueGamesEntities();
+            ContextEntities = new QueueGamesContext();
         }
 
         public T Insert(T entity)

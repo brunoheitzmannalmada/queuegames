@@ -2,4 +2,8 @@
 *.pdb
 *.cache
 *.suo
+*.user
 Thumbs.db
+bin/
+obj/
+TempPE/

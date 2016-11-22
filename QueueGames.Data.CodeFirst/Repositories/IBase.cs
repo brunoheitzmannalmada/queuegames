@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QueueGames.Data.Repositories
+namespace QueueGames.Data.CodeFirst.Repositories
 {
     public interface IBase<T>
     {

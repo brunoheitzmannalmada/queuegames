@@ -1,6 +1,7 @@
 ﻿using QueueGames.Data;
-using QueueGames.Data.Context;
-using QueueGames.Data.Repositories;
+using QueueGames.Data.CodeFirst.Context;
+using QueueGames.Data.CodeFirst.Entities;
+using QueueGames.Data.CodeFirst.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;

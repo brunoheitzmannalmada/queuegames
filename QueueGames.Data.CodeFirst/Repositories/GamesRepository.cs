@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QueueGames.Data.Repositories
+namespace QueueGames.Data.CodeFirst.Repositories
 {
-    public class GamesRepository : Base<QueueGames.Data.Context.Games>
+    public class GamesRepository : Base<Entities.Games>
     {
     }
 }

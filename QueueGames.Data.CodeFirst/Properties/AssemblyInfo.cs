@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("QueueGames.Data")]
+[assembly: AssemblyTitle("QueueGames.Data.CodeFirst")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("QueueGames.Data")]
+[assembly: AssemblyProduct("QueueGames.Data.CodeFirst")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("6de1f340-2072-41c5-9f09-6984b1c3bb11")]
+[assembly: Guid("1380ebbd-a368-4eed-9325-6f3cbaeb34fa")]
 
 // Version information for an assembly consists of the following four values:
 //
