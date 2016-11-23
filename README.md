@@ -16,7 +16,7 @@ Do you know something good to improve this application? That's awesome, I'm look
 ### How do I get set up? ###
 
 * The front end project uses AngularJS, Twitter Bootstrap and jQuery. But it all set up with CDN :)
-* The backend have a .mdf database file inside (I will improve this).
+* The backend now uses a Entity Framework Code First repository (and no more a .mdf database file attached).
 * The backend is a ASP.NET WEB API. I will implement OData soon.
 
 ### Who do I talk to? ###
