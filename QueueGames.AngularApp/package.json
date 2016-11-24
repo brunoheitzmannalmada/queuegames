@@ -1,0 +1,27 @@
+{
+  "name": "queuegames.angularapp",
+  "version": "1.0.0",
+  "description": "Here is a small project using AngularJS on front end, and ASP.NET Web API in the backend. The main goal was to create a queue window using AngularJS features, where the user can send a lot of requests to the backend server, and continue working on the application, while the user can see in real time the status of previous request.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server . -a localhost -p 10069 -c-1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://brunoalmada@bitbucket.org/brunoalmada/queuegame.git"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "author": "https://about.me/brunoha",
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/brunoalmada/queuegame#readme",
+  "devDependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "bootstrap": "^3.3.7",
+    "http-server": "^0.9.0",
+    "jquery": "^3.1.1"
+  }
+}

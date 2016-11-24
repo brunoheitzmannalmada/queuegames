@@ -1,6 +1,0 @@
-C:\Users\Bruno\SkyDrive\Projetos\QueueGames\QueueGames.Pure\bin\QueueGames.Pure.dll.config
-C:\Users\Bruno\SkyDrive\Projetos\QueueGames\QueueGames.Pure\bin\QueueGames.Pure.dll
-C:\Users\Bruno\SkyDrive\Projetos\QueueGames\QueueGames.Pure\bin\QueueGames.Pure.pdb
-C:\Users\Bruno\SkyDrive\Projetos\QueueGames\QueueGames.Pure\obj\Debug\QueueGames.Pure.csprojResolveAssemblyReference.cache
-C:\Users\Bruno\SkyDrive\Projetos\QueueGames\QueueGames.Pure\obj\Debug\QueueGames.Pure.dll
-C:\Users\Bruno\SkyDrive\Projetos\QueueGames\QueueGames.Pure\obj\Debug\QueueGames.Pure.pdb
