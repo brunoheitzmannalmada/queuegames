@@ -15,7 +15,8 @@ Do you know something good to improve this application? That's awesome, I'm look
 
 ### How do I get set up? ###
 
-* The front end project uses AngularJS, Twitter Bootstrap and jQuery. But it all set up with CDN :)
+* The front end project uses AngularJS, Twitter Bootstrap and jQuery. And now it is a real Front End Application, using npm :)
+* All references in the front end project are installed as npm packages.
 * The backend now uses a Entity Framework Code First repository (and no more a .mdf database file attached).
 * The backend is a ASP.NET WEB API. I will implement OData soon.
 
