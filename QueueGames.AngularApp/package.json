@@ -5,11 +5,12 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "http-server . -a localhost -p 10069 -c-1"
+    "start": "http-server . -a localhost -p 10069 -c-1",
+    "startdist": "http-server ./dist -a localhost -p 10069 -c-1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://brunoalmada@bitbucket.org/brunoalmada/queuegame.git"
+    "url": "https://bitbucket.org/brunoalmada/queuegame"
   },
   "keywords": [
     "angular"
@@ -21,6 +22,10 @@
     "angular": "^1.5.8",
     "angular-route": "^1.5.8",
     "bootstrap": "^3.3.7",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.0",
     "http-server": "^0.9.0",
     "jquery": "^3.1.1"
   }
