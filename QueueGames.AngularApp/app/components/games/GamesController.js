@@ -1,4 +1,4 @@
-﻿app.controller('GamesController', ['$rootScope', '$http', 'API_ADDRESS', function ($rootScope, $http, apiAddress) {
+﻿app.controller('GamesController', ['$rootScope', '$http', 'API_ADDRESS', 'QueueItem', function ($rootScope, $http, apiAddress, QueueItem) {
     var gamesCtrl = this;
     this.listOfGames = [];
     this.Games = [];
@@ -111,6 +111,6 @@
     };
 
     this.Include = function () {
-        return '/app/view/GamesCreateEdit.html';
+        return '/app/components/games/GamesCreateEdit.html';
     };
 }]);

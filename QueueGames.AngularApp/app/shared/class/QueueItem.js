@@ -1,4 +1,4 @@
-﻿function QueueItem(field1, field2, post, successCallback, errorCallback) {
+﻿app.value("QueueItem", function (field1, field2, post, successCallback, errorCallback) {
     var queueItem = this;
     this.field1 = field1;
     this.field2 = field2;
@@ -17,4 +17,4 @@
     });
 
     return this;
-};
+});

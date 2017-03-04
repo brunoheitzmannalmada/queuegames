@@ -1,4 +1,4 @@
-﻿app.controller('ProductsController', ['$rootScope', '$http', 'API_ADDRESS', function ($rootScope, $http, apiAddress) {
+﻿app.controller('ProductsController', ['$rootScope', '$http', 'API_ADDRESS', 'QueueItem', function ($rootScope, $http, apiAddress, QueueItem) {
     var productsCtrl = this;
     this.listOfItems = [];
     this.Products = [];
@@ -115,6 +115,6 @@
     };
 
     this.Include = function () {
-        return '/app/view/ProductEdit.html';
+        return '/app/components/products/ProductEdit.html';
     };
 }]);

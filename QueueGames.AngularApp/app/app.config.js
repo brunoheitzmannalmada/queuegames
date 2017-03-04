@@ -3,11 +3,11 @@
 
   $routeProvider
       .when('/', {
-        templateUrl: '/app/view/GamesView.html',
+        templateUrl: '/app/components/games/GamesView.html',
         controller: 'GamesController'
       })
       .when('/Products', {
-        templateUrl: '/app/view/ProductsView.html',
+        templateUrl: '/app/components/products/ProductsView.html',
         controller: 'ProductsController'
       });
 });
