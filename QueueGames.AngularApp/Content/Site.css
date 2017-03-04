@@ -102,15 +102,15 @@ input[type="checkbox"].input-validation-error {
 }
 
 .buy {
-    color: green;
+    color: #008000;
 }
 
 .like {
-    color: blue;
+    color: #0000FF;
 }
 
 .remove {
-    color: red;
+    color: #FF0000;
 }
 
 /* QUEUE MANAGER */
@@ -125,7 +125,7 @@ input[type="checkbox"].input-validation-error {
 }
 
 .queueManager .command {
-    background-color: yellow;
+    background-color: #FFFF00;
     text-align: right;
     width: 100%;
     z-index: 50;
@@ -144,9 +144,9 @@ input[type="checkbox"].input-validation-error {
 }
 
 .statusOK {
-    color: green;
+    color: #008000;
 }
 
 .statusError {
-    color: red;
+    color: #FF0000;
 }

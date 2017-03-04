@@ -1,5 +1,5 @@
-﻿app.config(function ($routeProvider, $locationProvider) {
-  $routeProvider
+﻿app.config(["$routeProvider", "$locationProvider", function (routeProvider, locationProvider) {
+  routeProvider
       .when('/Games', {
         templateUrl: '/app/components/games/GamesView.html',
         controller: 'GamesController'
@@ -13,5 +13,5 @@
         controller: 'GamesController'
       });
 
-    $locationProvider.html5Mode(true);
-});
+    locationProvider.html5Mode(true);
+}]);

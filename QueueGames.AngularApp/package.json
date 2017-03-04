@@ -2,7 +2,7 @@
   "name": "queuegames.angularapp",
   "version": "1.0.0",
   "description": "Here is a small project using AngularJS on front end, and ASP.NET Web API in the backend. The main goal was to create a queue window using AngularJS features, where the user can send a lot of requests to the backend server, and continue working on the application, while the user can see in real time the status of previous request.",
-  "main": "index.html",
+  "main": "Index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "http-server . -a localhost -p 10069 -c-1",
@@ -23,6 +23,7 @@
     "angular-route": "^1.5.8",
     "bootstrap": "^3.3.7",
     "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.0.3",
     "gulp-concat": "^2.6.1",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^2.0.0",
